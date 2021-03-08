@@ -1,0 +1,31 @@
+﻿@model List<GitRepo.Models.GitRepoClass>
+
+@{
+    ViewBag.Title = "GitRepoClass";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GitRepo</h2>
+
+<div>
+    <h4>GitRepo</h4>
+    <hr />
+
+
+    <table class="table table-bordered table-hover" >
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model[0].login)
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                   @item.login
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
